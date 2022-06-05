@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="453.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BD_Controller.Cont_AddSelectDescriptionProduct">
+   <children>
+      <Label fx:id="Label_1" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="5.0" prefHeight="31.0" prefWidth="367.0" text="Доп. выбор описания товара из списка" textFill="#190ae8" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </Label>
+      <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="31.0" layoutY="39.0" prefHeight="17.0" prefWidth="145.0" text="Выбор описания товара " textAlignment="CENTER">
+         <font>
+            <Font size="12.0" />
+         </font></Label>
+      <TextField fx:id="TextField_DescritionProduct" layoutX="30.0" layoutY="312.0" prefHeight="26.0" prefWidth="357.0" visible="false">
+         <font>
+            <Font size="12.0" />
+         </font></TextField>
+      <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="23.0" layoutY="292.0" prefHeight="17.0" prefWidth="169.0" text="Выбранное описание товара" textAlignment="CENTER" visible="false">
+         <font>
+            <Font size="12.0" />
+         </font></Label>
+      <Button fx:id="Button_SelectDescritionProduct" layoutX="227.0" layoutY="59.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="169.0" text="Выбор по первым буквам">
+         <font>
+            <Font size="12.0" />
+         </font></Button>
+      <TextField fx:id="TextField_SelectDescritionProduct" layoutX="29.0" layoutY="59.0" prefHeight="26.0" prefWidth="189.0">
+         <font>
+            <Font size="12.0" />
+         </font></TextField>
+      <TableView fx:id="TableView_ListDescritionProduct" layoutX="17.0" layoutY="94.0" prefHeight="310.0" prefWidth="426.0">
+        <columns>
+          <TableColumn fx:id="Column_ListDescritionProduct" prefWidth="417.0" text="Список описания товаров" />
+            <TableColumn fx:id="Column_ListDescritionProduct_Id" minWidth="0.0" prefWidth="5.0" text="id" />
+        </columns>
+      </TableView>
+      <Button fx:id="Button_InsertCardProduct" layoutX="251.0" layoutY="416.0" mnemonicParsing="false" prefHeight="10.0" prefWidth="190.0" text="Копировать описание товара">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

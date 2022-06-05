@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="755.0" prefWidth="1262.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BD_Controller.Cont_CardClient">
+   <children>
+      <ScrollPane prefHeight="754.0" prefWidth="1262.0">
+         <content>
+            <AnchorPane fx:id="AnchorPaneCardClient" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="1262.0">
+               <children>
+                  <Label fx:id="Label_1" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="609.0" layoutY="5.0" prefHeight="31.0" prefWidth="196.0" text="Карточка клиента" textFill="#190ae8" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="NONE" />
+                     </cursor>
+                  </Label>
+                  <TextField fx:id="TextFildName" layoutX="174.0" layoutY="54.0" prefHeight="31.0" prefWidth="573.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="65.0" layoutY="54.0" prefHeight="27.0" prefWidth="102.0" text="Клиент (ФИО)" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="TextFildMail" layoutX="174.0" layoutY="95.0" prefHeight="31.0" prefWidth="573.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="22.0" layoutY="96.0" prefHeight="27.0" prefWidth="145.0" text="Электронная почта :" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="TextFildTell" layoutX="174.0" layoutY="136.0" prefHeight="31.0" prefWidth="573.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="19.0" layoutY="137.0" prefHeight="27.0" prefWidth="148.0" text="Телефон 1,2 номера " textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="154.0" layoutY="257.0" prefHeight="27.0" prefWidth="102.0" text="Комментарий" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="19.0" layoutY="432.0" prefHeight="27.0" prefWidth="210.0" text="Редакция данных клиента " textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="18.0" layoutY="467.0" prefHeight="27.0" prefWidth="341.0" text="Выберите строку для редакции:" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="ButtonInsertData" layoutX="28.0" layoutY="294.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="125.0" text="Сохранить">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ButtonChangeLine" layoutX="25.0" layoutY="398.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="163.0" text="Редактировать строку">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ButtonDeleteLine" layoutX="438.0" layoutY="398.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="121.0" text="Удалить строку">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="TableViewClient" layoutX="11.0" layoutY="445.0" prefHeight="278.0" prefWidth="1228.0">
+                     <columns>
+                        <TableColumn fx:id="Column_NameClient" prefWidth="255.00001525878906" text="Имя Клиента" />
+                        <TableColumn fx:id="Column_Address" prefWidth="228.0" text="Адрес" />
+                        <TableColumn fx:id="Column_Tell" prefWidth="135.0" text="Телефон" />
+                        <TableColumn fx:id="Column_Mail" prefWidth="119.0" text="Маил" />
+                        <TableColumn fx:id="Column_DataRecords" prefWidth="164.0" text="Дата записи" />
+                        <TableColumn fx:id="Column_Comment" minWidth="0.0" prefWidth="314.0" text="Комментарий" />
+                        <TableColumn fx:id="Id" minWidth="7.0" prefWidth="7.0" text="Id" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="ButtonSelectClientBD" layoutX="994.0" layoutY="296.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="225.0" text="Выбор по первым буквам">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label contentDisplay="CENTER" layoutX="869.0" layoutY="145.0" prefHeight="27.0" prefWidth="210.0" text="Первые буквы фамилии" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="994.0" layoutY="213.0" prefHeight="27.0" prefWidth="210.0" text="Выбор клиента" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="TextFildSelectClient" layoutX="994.0" layoutY="245.0" prefHeight="31.0" prefWidth="224.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="ButtonClearTextFild" layoutX="27.0" layoutY="345.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="131.0" text="Очистить форму">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ButtonClearTableView" layoutX="607.0" layoutY="398.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="142.0" text="Очистить таблицу">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <TextArea fx:id="TextAreaKomment" layoutX="263.0" layoutY="267.0" prefHeight="77.0" prefWidth="486.0" />
+                  <Button fx:id="ButtonSaveChangeLine" layoutX="230.0" layoutY="398.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="164.0" text="Сохранить изменения">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ButtonSelectClient_Buy_Sell" layoutX="1032.0" layoutY="395.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="185.0" text="Копировать имя клиента">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Separator layoutX="36.0" layoutY="444.0" prefHeight="1.0" prefWidth="713.0" visible="false" />
+                  <Separator layoutX="37.0" layoutY="406.0" prefHeight="1.0" prefWidth="713.0" visible="false" />
+                  <Separator layoutX="747.0" layoutY="332.0" orientation="VERTICAL" prefHeight="75.0" prefWidth="2.0" visible="false" />
+                  <Separator layoutX="977.0" layoutY="349.0" prefHeight="2.0" prefWidth="240.0" />
+                  <Separator layoutX="977.0" layoutY="199.0" orientation="VERTICAL" prefHeight="151.0" prefWidth="0.0" />
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="110.0" layoutY="188.0" prefHeight="12.0" prefWidth="50.0" text="Адрес" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="TextAreaAddress" layoutX="174.0" layoutY="179.0" prefHeight="77.0" prefWidth="576.0" />
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="449.0" layoutY="354.0" prefHeight="27.0" prefWidth="102.0" text="Дата записи" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="Button_Go_CardOrder" layoutX="974.0" layoutY="348.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="294.0" text="Перейти в &quot;карточку заказа&quot;" visible="false">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <DatePicker fx:id="DataPicker_DateRecords" layoutX="559.0" layoutY="355.0" prefHeight="26.0" prefWidth="190.0" />
+                  <Separator layoutX="769.0" layoutY="51.0" orientation="VERTICAL" prefHeight="382.0" prefWidth="0.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

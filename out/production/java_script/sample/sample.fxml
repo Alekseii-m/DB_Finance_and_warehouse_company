@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="336.0" prefWidth="318.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Button fx:id="button_serviceCard" layoutX="55.0" layoutY="40.0" mnemonicParsing="false" prefHeight="12.0" prefWidth="209.0" text="Карточка услуги" />
+      <Button fx:id="button_productCard" layoutX="56.0" layoutY="80.0" mnemonicParsing="false" prefHeight="12.0" prefWidth="209.0" text="Карточка продукта" />
+      <Button fx:id="button_clientCard" layoutX="57.0" layoutY="121.0" mnemonicParsing="false" prefHeight="12.0" prefWidth="209.0" text="Карточка клиента" />
+      <Button fx:id="button_counterparty" layoutX="57.0" layoutY="162.0" mnemonicParsing="false" prefHeight="12.0" prefWidth="209.0" text="Карточка контрагента" />
+      <Button fx:id="button_orderCard" layoutX="57.0" layoutY="202.0" mnemonicParsing="false" prefHeight="12.0" prefWidth="209.0" text="Карточка заказа" />
+      <Button fx:id="button_BaySell" layoutX="57.0" layoutY="242.0" mnemonicParsing="false" prefHeight="12.0" prefWidth="209.0" text="Покупка-продажа_услуг-товаров" />
+      <Button fx:id="button_assemblyProduct" layoutX="58.0" layoutY="281.0" mnemonicParsing="false" prefHeight="12.0" prefWidth="209.0" text="Сборный товар" />
+   </children>
+</AnchorPane>

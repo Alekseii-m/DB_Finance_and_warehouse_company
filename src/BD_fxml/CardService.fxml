@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="830.0" prefWidth="1016.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BD_Controller.Cont_CardService">
+   <children>
+      <ScrollPane prefHeight="830.0" prefWidth="1016.0">
+         <content>
+            <AnchorPane fx:id="AnchorPane_Servis" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="830.0" prefWidth="1016.0">
+               <children>
+                  <Label fx:id="Label_1" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="14.0" prefHeight="31.0" prefWidth="189.0" text="Карточка услуги" textFill="#190ae8" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="NONE" />
+                     </cursor>
+                  </Label>
+                  <Button fx:id="Button_FormClear" layoutX="791.0" layoutY="223.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="190.0" text="Очистить формы заполн. ">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Button_EditLine" layoutX="13.0" layoutY="355.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="172.0" text="Редактировать строку">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Button_SaveService" layoutX="792.0" layoutY="169.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="190.0" text="Сохранить">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="519.0" layoutY="256.0" prefHeight="3.0" prefWidth="110.0" text="Примечание  : ">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="TextArea_Comment" layoutX="519.0" layoutY="277.0" prefHeight="61.0" prefWidth="382.0" />
+                  <Separator layoutX="505.0" layoutY="83.0" orientation="VERTICAL" prefHeight="258.0" prefWidth="6.0" style="-fx-background-color: #7b7b7b;" />
+                  <TableView fx:id="TableView_Service" layoutX="10.0" layoutY="405.0" prefHeight="378.0" prefWidth="1013.0">
+                     <columns>
+                        <TableColumn fx:id="Column_NameService" prefWidth="394.0" text="Название услуги" />
+                        <TableColumn fx:id="Column_StartPrice" prefWidth="139.0" text="Начальная цена" />
+                        <TableColumn fx:id="Column_AdditionalPrice" prefWidth="149.0" text="Добавочная цена" />
+                        <TableColumn fx:id="Column_DateRecords" minWidth="0.0" prefWidth="115.0" text="Дата записи" />
+                        <TableColumn fx:id="Column_Comment" minWidth="0.0" prefWidth="190.0" text="Примечание" />
+                        <TableColumn fx:id="Column_Id" minWidth="0.0" prefWidth="25.66668701171875" text="Id" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="ButtonClearTableView" layoutX="505.0" layoutY="355.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="138.0" text="Очистить таблицу">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Button_SaveLine" layoutX="200.0" layoutY="355.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="154.0" text="Сохранить изменения">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Button_DeleteDataLine" layoutX="371.0" layoutY="355.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="117.0" text="Удалить строку">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="519.0" layoutY="195.0" prefHeight="17.0" prefWidth="76.0" text="Дата записи" textAlignment="CENTER">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="DataPicker_DateRecords" layoutX="519.0" layoutY="216.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="190.0" />
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="26.0" layoutY="117.0" prefHeight="17.0" prefWidth="84.0" text="Выбор услуги " textAlignment="CENTER">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="Button_SelectService" layoutX="24.0" layoutY="172.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="167.0" text="Выбор по первым буквам">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="TextField_SelectService" layoutX="24.0" layoutY="137.0" prefHeight="23.0" prefWidth="464.0">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="518.0" layoutY="78.0" prefHeight="21.0" prefWidth="129.0" text="Название услуги" textAlignment="CENTER">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="TextField_Select_NameService" layoutX="517.0" layoutY="101.0" prefHeight="26.0" prefWidth="382.0">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="ButtonSelect_SimilarName" layoutX="775.0" layoutY="70.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" text="Выбрать похожее" visible="false">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="TextField_StartingPrice" layoutX="517.0" layoutY="154.0" prefHeight="26.0" prefWidth="110.0">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="515.0" layoutY="134.0" prefHeight="17.0" prefWidth="99.0" text="Начальная цена" textAlignment="CENTER">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="TextField_AdditionalPrice" layoutX="649.0" layoutY="154.0" prefHeight="26.0" prefWidth="110.0">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="653.0" layoutY="134.0" prefHeight="17.0" prefWidth="99.0" text="Добавочная цена" textAlignment="CENTER">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="Button_Select_NameService_TimeRecords" layoutX="23.0" layoutY="247.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="470.0" text="Выбрать услуги по первым буквам названия и по времен. периоду записи">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="18.0" layoutY="60.0" prefHeight="17.0" prefWidth="99.0" text="Начало периода:" textAlignment="CENTER">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="205.0" layoutY="60.0" prefHeight="17.0" prefWidth="90.0" text="Конец периода:" textAlignment="CENTER">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="DataPicker_DateStart" layoutX="23.0" layoutY="78.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="159.0" />
+                  <DatePicker fx:id="DataPicker_DateFinal" layoutX="205.0" layoutY="78.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="156.0" />
+                  <Button fx:id="Button_TimeRecords" layoutX="23.0" layoutY="209.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="470.0" text="Выбрать услуги по времен. периоду записи">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Button_Go_BaySell" layoutX="725.0" layoutY="308.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="244.0" text="Перейти на вкладку &quot;Продажи/покупки&quot;" visible="false">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Button_Copy_NameService" layoutX="794.0" layoutY="355.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="183.0" text="Копировать название услуги">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

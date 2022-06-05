@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="702.0" prefWidth="1268.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BD_Controller.Cont_BuySell_Service">
+   <children>
+      <ScrollPane prefHeight="701.0" prefWidth="1268.0">
+         <content>
+            <AnchorPane fx:id="AnchorPane_Bay_Sell_Servis_Product" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="706.0" prefWidth="1268.0">
+               <children>
+                  <Label fx:id="Label_1" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="21.0" layoutY="-2.0" prefHeight="31.0" prefWidth="352.0" text="Покупка-Продажа_Услуг / Товаров" textFill="#190ae8" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="NONE" />
+                     </cursor>
+                  </Label>
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="233.0" layoutY="101.0" prefHeight="21.0" prefWidth="234.0" text="КонтрАгент предлагающий услугу/товар" textAlignment="CENTER">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="ButtonFormClear" layoutX="97.0" layoutY="271.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="121.0" text="Очистить формы ">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ButtonEditLine" layoutX="18.0" layoutY="432.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="112.0" text="Редактировать ">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ButtonSave" layoutX="96.0" layoutY="214.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Сохранить">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="244.0" layoutY="329.0" prefHeight="15.0" prefWidth="110.0" text="Примечание  : ">
+                     <font>
+                        <Font size="12.0" />
+                     </font></Label>
+                  <TextArea fx:id="TextAreaComment" layoutX="245.0" layoutY="346.0" prefHeight="44.0" prefWidth="492.0" />
+                  <TextField fx:id="TextFildCounterpartyСhoice1" layoutX="248.0" layoutY="124.0" prefHeight="25.0" prefWidth="492.0">
+                     <font>
+                        <Font size="12.0" />
+                     </font></TextField>
+                  <Button fx:id="ButtonInsertCounterparty1" layoutX="665.0" layoutY="75.0" mnemonicParsing="false" prefHeight="12.0" prefWidth="70.0" text="Внести">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+                  <Separator layoutX="231.0" layoutY="52.0" orientation="VERTICAL" prefHeight="344.0" prefWidth="5.0" style="-fx-background-color: #7b7b7b;" />
+                  <TableView fx:id="TableView_Bay_Sell_Servis_Product" editable="true" layoutX="-2.0" layoutY="474.0" prefHeight="201.0" prefWidth="1250.0">
+                     <columns>
+                        <TableColumn fx:id="ColumnOrderNumber" prefWidth="107.00003051757812" text="№ заказа" />
+                        <TableColumn fx:id="Column_Service_Product" prefWidth="146.00003051757812" text="Услуга/Продукт" />
+                        <TableColumn fx:id="ColumnAmount" minWidth="0.0" prefWidth="41.0" text="К-во" />
+                        <TableColumn fx:id="Column_DatePurchase" minWidth="0.0" prefWidth="79.0" text="Дата пок." />
+                        <TableColumn fx:id="ColumnCounterpartyOffering" minWidth="0.0" prefWidth="167.0" text="КонтрАгент предлаг." />
+                        <TableColumn fx:id="ColumnCounterpartyBuying" minWidth="0.0" prefWidth="150.0" text="КонтрАгент покуп." />
+                        <TableColumn fx:id="ColumnPayments" prefWidth="131.0" text="Оплата КонтрАг." />
+                        <TableColumn fx:id="ColumnAddedCost" minWidth="0.0" prefWidth="108.0" text="Добав.Стоим." />
+                        <TableColumn fx:id="ColumnTotalCost" prefWidth="98.0" text="Итог.Стоим." />
+                        <TableColumn fx:id="ColumnComment" minWidth="0.0" prefWidth="208.0" text="Примечание" />
+                        <TableColumn fx:id="ColumnId" minWidth="0.0" prefWidth="4.0" text="Id" visible="false" />
+                        <TableColumn fx:id="Column_select_s_p" minWidth="0.0" prefWidth="3.0" text="s_p_?" visible="false" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="ButtonClearTableView" layoutX="517.0" layoutY="433.0" mnemonicParsing="false" prefHeight="8.0" prefWidth="138.0" text="Очистить таблицу">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ButtonSaveLine" layoutX="148.0" layoutY="432.0" mnemonicParsing="false" prefHeight="8.0" prefWidth="141.0" text="Сохранить изменения">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Separator layoutX="749.0" layoutY="5.0" orientation="VERTICAL" prefHeight="383.0" prefWidth="0.0" style="-fx-background-color: #7b7b7b;" />
+                  <Button fx:id="ButtonDeleteLine" layoutX="307.0" layoutY="432.0" mnemonicParsing="false" prefHeight="6.0" prefWidth="193.0" text="Удалить строку">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ButtonSelectCounterparty1" layoutX="576.0" layoutY="43.0" mnemonicParsing="false" prefHeight="12.0" prefWidth="159.0" text="Выбрать контрагентов">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Button_SelectServiceCounterpartyOffer_OrderNumber" layoutX="762.0" layoutY="33.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="470.0" text="Выбрать услуги по КонтрАгенту предлаг. и номеру заказа">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Separator layoutX="235.0" layoutY="324.0" prefHeight="2.0" prefWidth="516.0" style="-fx-background-color: #7b7b7b;" />
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="605.0" layoutY="271.0" prefHeight="17.0" prefWidth="77.0" text="Дата записи" textAlignment="CENTER">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="DataPicker_RecordingDate" layoutX="583.0" layoutY="286.0" prefHeight="25.0" prefWidth="159.0" />
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="25.0" layoutY="311.0" prefHeight="27.0" prefWidth="159.0" text="Выбор Номера Заказа " textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="TextField_OrderNumber" layoutX="30.0" layoutY="143.0" prefHeight="17.0" prefWidth="189.0">
+                     <font>
+                        <Font size="12.0" />
+                     </font></TextField>
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="30.0" layoutY="112.0" prefHeight="27.0" prefWidth="99.0" text="Номер Заказа" textAlignment="CENTER">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="ButtonSelectPrTaskYear" layoutX="25.0" layoutY="382.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="192.0" text="Выбор № по году и мес." visible="false">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="TextField_Select_OrderNumber" layoutX="26.0" layoutY="343.0" prefHeight="15.0" prefWidth="189.0" visible="false">
+                     <font>
+                        <Font size="12.0" />
+                     </font></TextField>
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="237.0" layoutY="151.0" prefHeight="17.0" prefWidth="218.0" text="КонтрАгент покупающий услугу/товар" textAlignment="CENTER">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="TextFildCounterpartyСhoice2" layoutX="247.0" layoutY="171.0" prefHeight="25.0" prefWidth="492.0">
+                     <font>
+                        <Font size="12.0" />
+                     </font></TextField>
+                  <Separator layoutX="236.0" layoutY="202.0" prefHeight="2.0" prefWidth="519.0" style="-fx-background-color: #7b7b7b;" />
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="246.0" layoutY="227.0" prefHeight="21.0" prefWidth="99.0" text="Услуга/товар" textAlignment="CENTER">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="TextFild_Servis_Product" layoutX="247.0" layoutY="246.0" prefHeight="25.0" prefWidth="492.0">
+                     <font>
+                        <Font size="12.0" />
+                     </font></TextField>
+                  <Button fx:id="ButtonInsert_Servis_Product" layoutX="664.0" layoutY="215.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Внести">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ButtonSelect_Servis_Product" layoutX="555.0" layoutY="215.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="90.0" text="Выбрать">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="250.0" layoutY="284.0" prefHeight="17.0" prefWidth="78.0" text="Количество :" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="TextFild_Amount" layoutX="337.0" layoutY="281.0" prefHeight="3.0" prefWidth="110.0">
+                     <font>
+                        <Font size="12.0" />
+                     </font></TextField>
+                  <Button fx:id="Button_SelectServiceCounterpartyBay_OrderNumber" layoutX="763.0" layoutY="89.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="470.0" text="Выбрать услуги по КонтрАгенту покуп. и номеру заказа">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Separator layoutX="753.0" layoutY="147.0" prefHeight="3.0" prefWidth="477.0" style="-fx-background-color: #7b7b7b;" />
+                  <Button fx:id="Button_SelectService_CounterpartyBay_TimePeriod" layoutX="763.0" layoutY="61.0" mnemonicParsing="false" prefHeight="10.0" prefWidth="470.0" text="Выбрать услуги по КонтрАгенту покуп. и по времен. периоду">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Button_SelectService_CounterpartyOffer_TimePeriod" layoutX="762.0" layoutY="5.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="470.0" text="Выбрать услуги по КонтрАгенту предлаг. и времен. периоду">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="TextFild_TotalPaymentCounterparty" layoutX="870.0" layoutY="410.0" prefHeight="0.0" prefWidth="99.0">
+                     <font>
+                        <Font size="12.0" />
+                     </font></TextField>
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="865.0" layoutY="392.0" prefHeight="15.0" prefWidth="109.0" text="Оплата КонтрАг_ общ." textAlignment="CENTER">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="TextFild_TotalAddedCost" layoutX="992.0" layoutY="410.0" prefHeight="1.0" prefWidth="99.0">
+                     <font>
+                        <Font size="12.0" />
+                     </font></TextField>
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="992.0" layoutY="393.0" prefHeight="15.0" prefWidth="92.0" text="Добав.Стоим._общ." textAlignment="CENTER">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="DataPicker_TimePeriod_Start" layoutX="768.0" layoutY="156.0" prefHeight="31.0" prefWidth="169.0" promptText="Начало периода:" />
+                  <DatePicker fx:id="DataPicker_TimePeriod_End" layoutX="977.0" layoutY="156.0" prefHeight="0.0" prefWidth="159.0" promptText="Конец периода:" />
+                  <Button fx:id="ButtonSelectService_TimePeriod" layoutX="762.0" layoutY="117.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="244.0" text="Выбрать услуги по временному периоду">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ButtonSelectService_OrderNumber" layoutX="1014.0" layoutY="117.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="215.0" text="Выбрать услуги по номеру заказа">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Separator layoutX="753.0" layoutY="193.0" prefHeight="3.0" prefWidth="477.0" style="-fx-background-color: #7b7b7b;" />
+                  <Button fx:id="Button_SelectProductCounterpartyOffer_OrderNumber" layoutX="763.0" layoutY="229.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="470.0" text="Выбрать товары по КонтрАгенту предлаг. и номеру заказа">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Button_SelectProductCounterpartyBay_OrderNumber" layoutX="763.0" layoutY="287.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="470.0" text="Выбрать товары по КонтрАгенту покуп. и номеру заказа">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Separator layoutX="754.0" layoutY="348.0" prefHeight="3.0" prefWidth="477.0" style="-fx-background-color: #7b7b7b;" />
+                  <Button fx:id="Button_SelectProduct_CounterpartyBay_TimePeriod" layoutX="764.0" layoutY="258.0" mnemonicParsing="false" prefHeight="10.0" prefWidth="470.0" text="Выбрать товары по КонтрАгенту покуп. и по времен. периоду">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Button_SelectProduсt_CounterpartyOffer_TimePeriod" layoutX="763.0" layoutY="201.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="470.0" text="Выбрать товары по КонтрАгенту предлаг.  и времен. периоду">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ButtonSelectProduct_TimePeriod" layoutX="763.0" layoutY="316.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="244.0" text="Выбрать товары по времен. периоду">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ButtonSelectProduct_OrderNumber" layoutX="1020.0" layoutY="316.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="215.0" text="Выбрать товары по номеру заказа">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ButtonSelect_Service_Product_OrderNumber" layoutX="1001.0" layoutY="355.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="235.0" text="Выбрать товары и услуги по номеру заказа">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ButtonSelect_Service_Product_TimePeriod" layoutX="762.0" layoutY="355.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="232.0" text="Выбрать товары, услуги по врем.периоду">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <RadioButton fx:id="Select_Service" layoutX="259.0" layoutY="67.0" mnemonicParsing="false" text="Услуги">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="Select_Product" layoutX="342.0" layoutY="66.0" mnemonicParsing="false" text="Товары">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </RadioButton>
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="256.0" layoutY="46.0" prefHeight="17.0" prefWidth="146.0" text="Выбор направления учета" textAlignment="CENTER">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="Button_SelectPrTasK" layoutX="114.0" layoutY="53.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" text="Выбрать заказ">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Button_InsertPrTasK" layoutX="147.0" layoutY="88.0" mnemonicParsing="false" prefHeight="12.0" prefWidth="70.0" text="Внести">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Button_Сalculation" layoutX="783.0" layoutY="409.0" mnemonicParsing="false" prefHeight="11.0" prefWidth="56.0" text="Расчет">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+                  <Separator layoutX="754.0" layoutY="383.0" prefHeight="3.0" prefWidth="477.0" style="-fx-background-color: #7b7b7b;" />
+                  <TextField fx:id="TextFild_TotalCost" layoutX="1102.0" layoutY="409.0" prefHeight="1.0" prefWidth="99.0">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="1102.0" layoutY="394.0" prefHeight="15.0" prefWidth="99.0" text="Итог.Стоимость общ." textAlignment="CENTER">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="ButtonSelectCalcData" layoutX="1040.0" layoutY="441.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="161.0" text="Копировать расч.данные">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
